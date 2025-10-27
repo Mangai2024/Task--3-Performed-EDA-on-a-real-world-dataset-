@@ -1,18 +1,22 @@
-README.md (Task 3 – EDA)
-# Task 3: Performed EDA on a Real-World Dataset
+README.md (Task 3 – COVID-19 Dataset EDA)
+# Task 3: Performed EDA on COVID-19 Dataset
 
 ## 📌 Objective
-The goal of this task was to **perform Exploratory Data Analysis (EDA)** on a real-world dataset.  
+The goal of this task was to **perform Exploratory Data Analysis (EDA)** on a real-world COVID-19 dataset.  
 We explored categorical and numerical features, checked frequent values, plotted distributions, and created a correlation heatmap.
 
 ---
 
 ## 📂 Dataset
-- **Dataset**: [COVID-19 Dataset
-- **Format**: CSV  
-- **Rows**: ~XXXX (update with actual)  
-- **Columns**: ~XX (update with actual)  
-- **Target (if any)**: Example → `SalePrice` (House Prices)  
+- **Dataset**: COVID-19 Statistics  
+- **Rows**: 187  
+- **Columns**: 15  
+- **Important Columns**:  
+  - Country/Region  
+  - WHO Region  
+  - Confirmed, Deaths, Recovered, Active  
+  - New cases, New deaths, New recovered  
+  - Ratios like Deaths / 100 Cases, Recovered / 100 Cases  
 
 ---
 
@@ -20,40 +24,56 @@ We explored categorical and numerical features, checked frequent values, plotted
 1. **Loaded dataset with Pandas**
    ```python
    import pandas as pd
-   df = pd.read_csv("dataset.csv")
+   df = pd.read_csv("covid_19.csv")
 
 
 Frequent Values (Categorical Columns)
 
-Used .value_counts() to check top frequent categories
+Checked most frequent categories using .value_counts()
 
-Example: most common Neighborhood = "CollgCr" in House Prices dataset
+Example:
+
+WHO Region → Europe (56), Africa (48), Americas (35), Eastern Mediterranean (22), Western Pacific (16)
 
 Distribution Plots (Numerical Columns)
 
-Used Seaborn’s histplot() with KDE to check data distribution
+Plotted histograms for:
 
-Example: SalePrice was right-skewed
+Confirmed cases
+
+Deaths
+
+Recovered
+
+Active
+
+New cases
+
+All distributions showed right skewness (most countries had low counts, few had very high).
 
 Correlation Heatmap
 
-Created heatmap using Seaborn’s heatmap()
+Used Seaborn heatmap() on numeric columns
 
-Found strong positive correlation between SalePrice and GrLivArea, OverallQual
+Strong correlations found:
+
+Confirmed ↔ Deaths (positive correlation)
+
+Confirmed ↔ Recovered (very strong correlation)
+
+New cases ↔ New deaths (moderate correlation)
 
 📊 Findings
 
-Categorical features show imbalanced distributions (e.g., some values occur very frequently).
+Categorical: Europe and Africa dominate the WHO region counts.
 
-Numeric features like SalePrice show skewness.
+Numeric: Confirmed, Deaths, and Recovered all show skewed distributions.
 
-Strong correlations between key numeric features and the target variable.
-
-Some features show weak or no correlation, indicating low predictive power.
+Correlation: Confirmed cases strongly drive both deaths and recoveries.
 
 📈 Example Visualizations
 
-Distribution of SalePrice
+Distribution of Confirmed Cases
 
 
 Correlation Heatmap
@@ -61,8 +81,8 @@ Correlation Heatmap
 
 ✅ Outcome
 
-Gained insights into both categorical and numerical features.
+Performed EDA on a real-world COVID-19 dataset.
 
-Identified strong feature correlations for future modeling.
+Identified categorical distributions, numeric feature patterns, and feature correlations.
 
-Dataset is now ready for preprocessing and feature engineering in the next step.
+Dataset is now ready for further preprocessing and modeling tasks.
