@@ -8,7 +8,7 @@ We explored categorical and numerical features, checked frequent values, plotted
 ---
 
 ## 📂 Dataset
-- **Dataset**: [COVID-19 Dataset](your-dataset-link-here) *(or House Prices / whichever you used)*  
+- **Dataset**: [COVID-19 Dataset
 - **Format**: CSV  
 - **Rows**: ~XXXX (update with actual)  
 - **Columns**: ~XX (update with actual)  
