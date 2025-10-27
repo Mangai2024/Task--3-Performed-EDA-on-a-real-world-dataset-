@@ -7,7 +7,7 @@ We explored categorical and numerical features, checked frequent values, plotted
 
 ---
 
-## 📂 Dataset
+## 📂 Dataset Link - https://github.com/Mangai2024/Task--3-Performed-EDA-on-a-real-world-dataset-/blob/main/covid_19.csv
 - **Dataset**: COVID-19 Statistics  
 - **Rows**: 187  
 - **Columns**: 15  
